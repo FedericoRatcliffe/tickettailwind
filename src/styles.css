@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+    IDEA PARA HACER:
+Sacar las clases de angular material que solo utilizan mis componentes y meterlos en
+este archivo
+y sacar "@angular/material/prebuilt-themes/indigo-pink.css", de angular.json
+asi la app no tiene que descargar un archivo muy grande css
+en las que no uso todas las clases de angular material
+
+NAVEGADOR: application -> Frames -> CSS -> styles.css
+*/
+
+/* FUENTE GLOBAL */
+@font-face {
+    font-family: 'Vercetti';
+    src: url('./assets/fonts/Vercetti-Regular.woff2') format('woff2');
+}
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Vercetti' !important;
+}
+
+body {
+    margin: 0;
+    font-family: 'Vercetti' !important;
+    background-color: #F3F3F3;
+}
+
+
+
+
+/* APLICA AL PANEL DESPLEGABLE DEL NAVBAR */
+.mat-mdc-menu-item-text {
+    font-family: 'Vercetti' !important;
+}
+
+
+/* BOTON Y PANEL */
+.mat-mdc-raised-button {
+    border-radius:  0.5rem !important;
+    width: 10rem !important;
+    /* height: 2rem !important; */
+}
+.mat-mdc-menu-panel {
+    width: 10rem !important;
+}
+
+
+/* INPUT PERSONALIZADO */
+.inputStyle {
+    display: block;
+    height: 35px !important;
+
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    font-size: 1rem;
+    
+    border-radius: 5px;
+    border: none;
+
+    /* background-color: #E8E8E8; */
+    background-color: #FFFFFF;
+
+    outline-width: 0px !important;
+
+    &:focus {
+        outline-width: 0;
+        background: rgba(31, 134, 252, 0.15);
+        transition: background 0.5s;
+        border: solid 2px #0069FF !important;
+    }
+    
+}
+
+/* PARA RESPONSIVE */
+.transition-propia {
+    transition: 0.5s ease-in-out;
+}
+
+
+/* ESTO ELIMINA EL FOCUS AGREGADO POR EL BORDE AZUL DEL INPUT */
+input { 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}

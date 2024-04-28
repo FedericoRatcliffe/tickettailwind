@@ -1,0 +1,25 @@
+
+
+
+/* ESTO SACA LAS ARROWS DEL INPUT TYPE NUMBER */
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */
+
+/* Firefox */
+/* input[type=number] {
+    -moz-appearance: textfield;
+} */
+
+
+
+/* ESTO ELIMINA EL FOCUS AGREGADO POR EL BORDE AZUL DEL INPUT */
+input { 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+

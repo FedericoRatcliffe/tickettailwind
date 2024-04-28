@@ -1,0 +1,20 @@
+mat-toolbar {
+    height: 4rem;
+    background-color: #0069FF;
+}
+
+mat-toolbar-row {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mat-mdc-raised-button {
+    font-family: 'Vercetti' !important;
+    font-size: 1rem;
+}
+
+.txt {
+    font-weight: 500;
+}
+

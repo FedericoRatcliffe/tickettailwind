@@ -1,0 +1,49 @@
+<div class="flex justify-center mt-6">
+    
+    
+    <div>
+
+        <div class="flex sm:justify-start">
+            <h3 class="font-bold text-3xl">Creá tu cuenta</h3>
+        </div>
+
+
+        <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" autocomplete="off" class="mt-4">
+
+            <div>
+                <label>Email</label>
+                <input 
+                    class="inputStyle mt-1 w-80 sm:w-[27.5rem] transition-propia" 
+                    type="text" 
+                    formControlName="email" 
+                    required
+                />
+            </div>
+
+            <div class="mt-6">
+                <label>Contraseña</label>
+                <input 
+                    class="inputStyle mt-1 w-full sm:w-[27.5rem] transition-propia" 
+                    type="password" 
+                    formControlName="password" 
+                    required 
+                />
+            </div>
+
+            <div class="mt-6">
+                <button 
+                    mat-raised-button type="submit" 
+                    class="w-full h-10 rounded-lg text-white transition-propia"
+                    [ngClass]="{'bg-[#0069FF]': formLogin.valid, 'bg-[#808080]': !formLogin.valid}"
+                    [disabled]="!formLogin.valid">
+                    Ingresar
+                </button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+
+</div>
